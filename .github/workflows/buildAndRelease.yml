@@ -29,7 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ env.VERSION  }}.${{ github.run_number }}
-          release_name: vexelcore-${{ env.VERSION }}.${{ github.run_number }}
+          release_name: RuxlitLib-${{ env.VERSION }}.${{ github.run_number }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
@@ -39,6 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/libs/vexelcore-${{ env.VERSION }}-all.jar
-          asset_name: vexelcore-${{ env.VERSION }}.jar
+          asset_path: build/libs/RuxlitLib-${{ env.VERSION }}-all.jar
+          asset_name: RuxlitLib-${{ env.VERSION }}.jar
           asset_content_type: application/java-archive
